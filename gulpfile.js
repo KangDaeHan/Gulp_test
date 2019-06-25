@@ -10,6 +10,7 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
 var del = require('del');
+var autopolyfiller = require('gulp-autopolyfiller');
 
 // 폴더 정의
 var src = 'ui'; //작업 폴더
@@ -61,7 +62,10 @@ gulp.task('watch', async function(){
 // 서버 실행
 gulp.task('browserSync', async function(){
   browserSync.init({
-	// watch: true,
+	// host: "192.168.1.1", 
+	open: "external",
+	port: 58080,
+	browser: ["chrome", "firefox", "iexplore"],
     server: {
       baseDir: temp // 기준 경로를 temp(tmp) 로 설정
     }
