@@ -53,14 +53,15 @@ gulp.task('sass', async function() {
 // gulp 4.0 이상 버전 사용시 gulp.watch(path.scss, gulp.series(['sass']) 처럼 테스크 함수지정으로 변경
 gulp.task('watch', async function(){
   gulp.watch(path.scss, gulp.series(['sass']));
-  gulp.watch(path.js, gulp.series(['copyJs', browserSync.reload]));
-  gulp.watch(path.img, gulp.series(['copyImg', browserSync.reload]));
-  gulp.watch(path.html, gulp.series(['html', browserSync.reload]));
+  gulp.watch(path.js, gulp.series(['copyJs']));
+  gulp.watch(path.img, gulp.series(['copyImg']));
+  gulp.watch(path.html, gulp.series(['html']));
 });
 
 // 서버 실행
 gulp.task('browserSync', async function(){
   browserSync.init({
+	// watch: true,
     server: {
       baseDir: temp // 기준 경로를 temp(tmp) 로 설정
     }
@@ -75,18 +76,27 @@ gulp.task('html', async function(){
     basepath: src
   }))
   .pipe(gulp.dest(temp))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 });
 
 // js copy
 gulp.task('copyJs', async function() {
   return gulp.src(path.js)
   .pipe(gulp.dest(tmp.js))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 });
 
 // img copy
 gulp.task('copyImg', async function() {
   return gulp.src(path.img)
   .pipe(gulp.dest(temp))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 });
 
 // img build
