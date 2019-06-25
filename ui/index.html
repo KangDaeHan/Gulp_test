@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="description" content="">
+	<meta name="author" content="ui-lab">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Default</title>
+	<!--build:css ./common/css/global.min.css-->
+	<link rel="stylesheet" href="./common/css/global.css">
+	<link rel="stylesheet" href="./common/css/layout.css">
+	<!--endbuild-->
+
+	<!--build:js ./common/js/global.min.js -->
+	<script src="./common/js/common.js"></script>
+	<!--endbuild-->
+<body>
+
+<div id="wrap">
+	@@include('./inc/header.inc')	<!-- inc 파일 추가 -->
+	<div class="main-container">
+		<main id="content" class="contents">
+			content ㄴㅇㄴㅇ
+		</main>
+	</div>
+</div>
+@@include('./inc/footer.inc')	<!-- inc 파일 추가 -->
+</body>
+</html>

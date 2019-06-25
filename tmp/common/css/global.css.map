@@ -1,0 +1,1 @@
+{"version":3,"file":"global.css","sources":["global.scss"],"sourcesContent":["*, *:after, *:before {\r\n  box-sizing: border-box;\r\n  margin:0;\r\n  padding:0;\r\n}"],"names":[],"mappings":"AAAA,AAAA,CAAC,EAAE,CAAC,AAAA,MAAM,EAAE,CAAC,AAAA,OAAO,CAAC;EACnB,UAAU,EAAE,UAAU;EACtB,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC,GACV"}
