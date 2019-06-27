@@ -33,3 +33,14 @@ npm install --save-dev gulp
 프로젝트 최상위 폴더 아래에 파일 생성  
 파일 구성은 해당 프로젝트에 맞게 구성.
 
+*프로젝트 폴더 구조  
+```
+─ root
+  │  README.md
+  ├─ node_modules
+  ├─ tmp (실제 렌더링 폴더)
+  ├─ ui (해당 프로젝트 폴더 이름)
+  ├─ gulpfile.js
+  ├─ package.json
+  └─ .gitignore
+```
