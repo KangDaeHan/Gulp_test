@@ -121,7 +121,7 @@ gulp.task('sprite', async function(){
 	
 	var cssStream = spriteData.css
 		.pipe(csso())
-		.pipe(gulp.dest('./ui/common/css/'));
+		.pipe(gulp.dest('../ui/common/css/'));
 	
 	return merge(imgStream, cssStream);
 });
