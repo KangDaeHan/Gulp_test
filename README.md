@@ -9,5 +9,25 @@ gulp가 grunt 에 비해 특징적인 장점은 아래와 같다.
 node 의 stream 을 사용하는 빌드 도구로 task 를 병렬로 처리하여 상대적으로 작업 효율을 높일 수 있다.
 grunt의 경우 플러그인들을 json 형태로 선언하여 task 를 정의하고 하는데에 반해, gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 진입장벽이 낮아 최초 접근이 쉽다.
 
+###기본 설정  
 
-1. node 설치 ()
+`node 설치  
+[node.js](https://nodejs.org/ko/).  
+
+`npm 초기화  
+```
+npm init
+```
+
+`Gulp 설치
+```
+npm install -g gulp
+```
+
+`프로젝트 로컬 설치
+```
+npm install --save-dev gulp
+```
+
+`gulpfile.js 파일 생성
+프로젝트 최상위 폴더 아래에 파일 생성
