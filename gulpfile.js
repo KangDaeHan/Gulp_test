@@ -29,8 +29,7 @@ var path = {
   scss: src + '/common/scss/**/*.scss',
   js: src + '/common/js/**/*.js',
   html: src + '/**/*.html',
-  img: src + '/**/*.+(jpg|jpeg|gif|svg)',
-  imgSprite: src + '/**/*.png',
+  img: src + '/**/*.+(png|jpg|jpeg|gif|svg)',
   font: src + '/common/fonts/**/*.+(eot|woff|woff2|ttf|svg)',
   icon: src + '/common/icon/**/*.+(eot|woff|woff2|ttf|svg)',
   inc: src + '/**/*.inc'
@@ -46,7 +45,7 @@ var tmp = {
 };
 
 // scss 파일을 css 로 변환
-// task 순서 : sourcemap 생성 > sass 실행 > sourcemap 표시 > dest로 복사 > browser reload
+// task 순서 : sourcemap 생성 > sass 실행 > sourcemap 표시 > dist로 복사 > browser reload
 // async completion 오류 해결 방법 task function에 async 추가
 gulp.task('sass', async function() {
   return gulp.src(path.scss)
@@ -64,8 +63,7 @@ gulp.task('sass', async function() {
 gulp.task('watch', async function(){
   gulp.watch(path.scss, gulp.series(['sass']));
   gulp.watch(path.js, gulp.series(['copyJs']));
-  gulp.watch(path.img, gulp.series(['copyImg']));
-  gulp.watch(path.imgSprite, gulp.series(['sprite']));
+  gulp.watch(path.img, gulp.series(['copyImg','sprite']));
   gulp.watch(path.html, gulp.series(['html']));
 });
 
@@ -106,24 +104,21 @@ gulp.task('copyJs', async function() {
 
 // image sprite
 gulp.task('sprite', async function(){
-	var spriteData = gulp.src('../ui/**/*.png').pipe(spritesmith({
-		// imgPath: '../ui/img/sprite.png',
+	var spriteData = gulp.src('../gulp-test/ui/img/*.png').pipe(spritesmith({
 		imgName: 'sprite.png',
+		cssName: '_sprite.scss',
 		padding: 10,
-		cssName: 'sprite.css'
-	  }));
-	  
-	var imgStream = spriteData.img
-		// DEV: We must buffer our stream into a Buffer for `imagemin`
-		.pipe(buffer())
-		.pipe(imagemin())
-		.pipe(gulp.dest('../ui/img/'));
-	
-	var cssStream = spriteData.css
-		.pipe(csso())
-		.pipe(gulp.dest('../ui/common/css/'));
-	
-	return merge(imgStream, cssStream);
+		imgPath: './ui/common/img/sprite.png',
+		// cssFormat: 'scss',
+		cssVarMap: function (sprite) {
+			sprite.name = 'sprite-' + sprite.name;
+		}
+		// retinaSrcFilter: './dev/data/sprite/*@2x.png',
+		// retinaImgName: 'sprite@2x.png',
+		// retinaImgPath: '../images/common/sprite@2x.png'
+	}));
+	spriteData.img.pipe(gulp.dest('../gulp-test/ui/common/img/'));
+	spriteData.css.pipe(gulp.dest('../gulp-test/ui/common/scss/'));
 });
 
 // img copy
