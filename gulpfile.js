@@ -98,6 +98,7 @@ gulp.task('copyJs', async function() {
 });
 
 // image sprite
+// 이미지 
 gulp.task('sprite', async function(){
 	var spriteData = gulp.src('../gulp-test/ui/img/*.png').pipe(spritesmith({
 		imgName: 'sprite.png',
@@ -126,6 +127,7 @@ gulp.task('copyImg', async function() {
 });
 
 // img build
+// 이미지 빌드시 파일 사이즈 압축
 gulp.task('buildImg', async function() {
   return gulp.src(path.img)
   .pipe(cache(
