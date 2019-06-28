@@ -4,7 +4,6 @@ var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
 var fileinclude = require('gulp-file-include');
-
 var useref = require('gulp-useref');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
@@ -12,12 +11,8 @@ var uglify = require('gulp-uglify');
 var del = require('del');
 // var autopolyfiller = require('gulp-autopolyfiller');
 var spritesmith = require('gulp.spritesmith');
-// var spritesmith = require('gulp.spritesmith-multi');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-var merge = require('merge-stream');
-var buffer = require('vinyl-buffer');
-var csso = require('gulp-csso');
 
 // 폴더 정의
 var src = 'ui'; //작업 폴더
