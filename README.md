@@ -9,6 +9,11 @@ gulp의 특징적인 장점은 아래와 같다.
 node의 stream을 사용하는 빌드 도구로 task를 병렬로 처리하여 상대적으로 작업 효율을 높일 수 있다.
 gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 진입장벽이 낮아 최초 접근이 쉽다.
 
+- 자바스크립트 라이브러리, 서드파티 앱등을 모으고 축소, 압축을 수행
+- 단위 테스트(Unit Test) 수행
+- css 컴파일링
+- 브라우저 자동 Refresh
+
 ### 기본 설정  
 
 #### node 설치  
@@ -44,3 +49,5 @@ npm install --save-dev gulp
   ├─ package.json
   └─ .gitignore
 ```
+
+
