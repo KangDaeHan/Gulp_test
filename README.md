@@ -20,7 +20,7 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
 <details markdown="1">
 <summary>내용 접기/펼치기</summary>
 
-  ### *기본 설정  
+  ### #기본 설정#  
 
   #### node 설치  
   node.js [(바로가기)](https://nodejs.org/ko/) 설치 후 cmd 실행
