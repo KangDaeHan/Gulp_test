@@ -17,8 +17,9 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
 
 -----------------------------
 
+::: warning
 <details markdown="1">
-<summary style="background: #eeeeee;">접기/펼치기</summary>
+<summary>접기/펼치기</summary>
 
   ### 기본 설정  
 
@@ -57,5 +58,5 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
   ```
 
 </details>
-
+:::
 
