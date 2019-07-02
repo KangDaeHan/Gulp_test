@@ -15,8 +15,9 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
 - 브라우저 자동 Refresh
 - 이미지 무손실 압축
 
+<div style="background: #eee;">
 <details markdown="1">
-<summary style="background: #eee;">접기/펼치기</summary>
+<summary>접기/펼치기</summary>
 
   ### 기본 설정  
 
@@ -55,4 +56,5 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
   ```
 
 </details>
+</div>
 
