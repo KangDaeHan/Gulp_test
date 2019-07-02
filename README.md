@@ -15,48 +15,44 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
 - 브라우저 자동 Refresh
 - 이미지 무손실 압축
 
-[![screenshot][1]][1]  
-[1]: https://i.stack.imgur.com/CtiyS.png
-  
-<div style="background: #eeeeee;">
 <details markdown="1">
 <summary>접기/펼치기</summary>
 
-### 기본 설정  
+  ### 기본 설정  
 
-#### node 설치  
-node.js [(바로가기)](https://nodejs.org/ko/) 설치 후 cmd 실행
+  #### node 설치  
+  node.js [(바로가기)](https://nodejs.org/ko/) 설치 후 cmd 실행
 
-#### npm 초기화  
-```
-npm init
-```
+  #### npm 초기화  
+  ```
+  npm init
+  ```
 
-#### Gulp 설치
-```
-npm install -g gulp
-```
+  #### Gulp 설치
+  ```
+  npm install -g gulp
+  ```
 
-#### 프로젝트 로컬 설치
-```
-npm install --save-dev gulp
-```
+  #### 프로젝트 로컬 설치
+  ```
+  npm install --save-dev gulp
+  ```
 
-#### gulpfile.js 파일 생성
-프로젝트 최상위 폴더 아래에 파일 생성  
-파일 구성은 해당 프로젝트에 맞게 구성.
+  #### gulpfile.js 파일 생성
+  프로젝트 최상위 폴더 아래에 파일 생성  
+  파일 구성은 해당 프로젝트에 맞게 구성.
 
-- 프로젝트 폴더 구조  
-```
-─ root
-  │  README.md
-  ├─ node_modules
-  ├─ tmp (실제 렌더링 폴더)
-  ├─ ui (해당 프로젝트 폴더 이름)
-  ├─ gulpfile.js
-  ├─ package.json
-  └─ .gitignore
-```
+  - 프로젝트 폴더 구조  
+  ```
+  ─ root
+    │  README.md
+    ├─ node_modules
+    ├─ tmp (실제 렌더링 폴더)
+    ├─ ui (해당 프로젝트 폴더 이름)
+    ├─ gulpfile.js
+    ├─ package.json
+    └─ .gitignore
+  ```
 
 </details>
-</div>
+
