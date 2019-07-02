@@ -16,8 +16,7 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
 - 이미지 무손실 압축
 
 -----------------------------
-
-::: warning
+```html
 <details markdown="1">
 <summary>접기/펼치기</summary>
 
@@ -58,5 +57,4 @@ gulp는 json 형태가 아닌 js 형태로 task를 연결하여 상대적으로 
   ```
 
 </details>
-:::
-
+```
