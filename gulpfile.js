@@ -18,6 +18,7 @@ var imageminPngquant = require('imagemin-pngquant');
 var imageminZopfli = require('imagemin-zopfli');
 var imageminGiflossy = require('imagemin-giflossy');
 var imageminMozjpeg = require('imagemin-mozjpeg');
+var jasmineBrowser = require('gulp-jasmine-browser');
 
 // 폴더 정의
 var src = 'ui'; //작업 폴더
@@ -177,3 +178,9 @@ gulp.task('build', gulp.series(
 	gulp.parallel('copyJs','html', 'buildImg'),
 	'useref'
 ));
+
+gulp.task('jasmine', async function() {
+  return gulp.src(['src/**/*.js', 'spec/**/*_spec.js'])
+    .pipe(jasmineBrowser.specRunner())
+    .pipe(jasmineBrowser.server({port: 58080}));
+});
